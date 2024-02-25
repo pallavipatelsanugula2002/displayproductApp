@@ -23,11 +23,17 @@ To run this application locally, you need to have Node.js and npm installed on y
 ->**STRUCTURE OF THE APPLICATION**
 
      displayproducts/
+     
 ├── node_modules/
+
 ├── public/
+
 ├── src/
+
    ├── components/
+   
    │   ├── auth/
+   
    │   │   └── ContextProvider.js
    │   ├── Footer.css
    │   ├── Footer.js

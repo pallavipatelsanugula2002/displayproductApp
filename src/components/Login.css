@@ -1,0 +1,12 @@
+.form-container {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: hsl(189, 93%, 50%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: auto;
+}

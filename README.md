@@ -35,24 +35,43 @@ To run this application locally, you need to have Node.js and npm installed on y
    │   ├── auth/
    
    │   │   └── ContextProvider.js
+   
    │   ├── Footer.css
+   
    │   ├── Footer.js
+   
    │   ├── Header.css
+   
    │   ├── Header.js
+   
    │   ├── Home.css
+   
    │   ├── Home.js
+   
    │   ├── Login.css
+   
    │   ├── Login.js
+   
    │   ├── ProductCard.css
+   
    │   ├── ProductCard.js
+   
    │   ├── ProductDetails.js
+   
    │   ├── Products.css
+   
    │   ├── Products.js
+   
    │   └── Register.js
+   
    ├── images/
+   
    │   └── homePageImg.jpg
+   
    ├── App.css
+   
    ├── App.js
+   
    ├── index.js
 
 ->**HOW TO USE THE APPLICATION** 

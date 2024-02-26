@@ -5,6 +5,7 @@ import { DataContext } from './auth/ContextProvider';
 
 const Home = ({ featuredProducts }) => {
   const {userData}=useContext(DataContext)
+  const isLoggedIn = userData&&Object.keys(userData).length > 0;
   return (
 
     <div className='home-container'>
@@ -12,7 +13,7 @@ const Home = ({ featuredProducts }) => {
         <div>
           <h1>Welcome to Our Store</h1>
           <p style={{fontWeight:'bold'}}>Discover amazing deals on your favorite products</p>
-         { !userData&&<Link to="/login" className="shop-now">Shop Now</Link>}
+         { !isLoggedIn&&<Link to="/login" className="shop-now">Shop Now</Link>}
         </div>
       </section>
     </div>

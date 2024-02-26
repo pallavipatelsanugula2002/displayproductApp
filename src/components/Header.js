@@ -6,12 +6,13 @@ import { DataContext } from "./auth/ContextProvider";
 const Header = () => {
   const { userData, handleLogout } = useContext(DataContext);
   const navigate = useNavigate();
+  
+  const isLoggedIn = userData&&Object.keys(userData).length > 0;
 
   const handleLogoutClick = () => {
     handleLogout();
     navigate("/"); // Redirect to home page after logout
   };
-  
   return (
     <header>
       <nav>
@@ -19,7 +20,7 @@ const Header = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          {!userData && (
+          {!isLoggedIn && (
             <>
               <li>
                 <Link to="/login">Login</Link>
@@ -29,7 +30,7 @@ const Header = () => {
               </li>
             </>
           )}
-          {userData && (
+          {isLoggedIn && (
             <>
               <li>
                 <Link to="/products">Products</Link>

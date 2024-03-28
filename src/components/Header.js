@@ -2,21 +2,28 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import { DataContext } from "./auth/ContextProvider";
+import logo from '../images/logo.png'
 
 const Header = () => {
   const { userData, handleLogout } = useContext(DataContext);
   const navigate = useNavigate();
   
-  const isLoggedIn = userData&&Object.keys(userData).length > 0;
+  const isLoggedIn = userData && Object.keys(userData).length > 0;
 
   const handleLogoutClick = () => {
     handleLogout();
-    navigate("/"); // Redirect to home page after logout
+    navigate("/login"); // Redirect to login page after logout
   };
   return (
     <header>
       <nav>
-        <ul>
+        <ul style={{display:'flex'}}>
+          <li>
+            <Link to="/" ><img src={logo} height={45} width={45}></img></Link>
+          </li>
+          <li >
+            <Link to="/" style={{color:'skyblue', fontStyle:'italic'}}>Easy Shop</Link>
+          </li>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -35,8 +42,11 @@ const Header = () => {
               <li>
                 <Link to="/products">Products</Link>
               </li>
-              <li>
-                <button onClick={handleLogoutClick}>Logout</button>
+              <li style={{marginLeft:'auto'}}>
+                <Link to="/cart">Cart</Link>
+              </li>
+              <li >
+                <button onClick={handleLogoutClick} style={{marginTop:'3px'}}>Logout</button>
               </li>
             </>
           )}

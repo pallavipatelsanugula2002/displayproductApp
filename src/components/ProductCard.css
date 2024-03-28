@@ -7,15 +7,21 @@
     margin: 10px;
     padding: 10px;
     background-color: #fff;
-    width: 360px; /* Set a fixed width for the card */
-    height: 450px; /* Set a fixed height for the card */
+    width: 320px; /* Set a fixed width for the card */
+    height: auto; /* Adjust height to accommodate variable content */
     text-align: center;
+    overflow: hidden; /* Hide overflowing content */
 }
 
 .product-image {
     width: 100%; /* Make the image take up the full width of its container */
-    height: 100px; /* Set a fixed height for the image */
+    height: 200px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensure image covers its container */
     margin: auto;
+}
+
+.product-details {
+    margin-top: 10px;
 }
 
 .product-title {
@@ -34,18 +40,13 @@
     font-size: 14px;
 }
 
-.view-details-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 14px;
+.action-buttons {
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.view-details-button:hover {
-    background-color: #0056b3;
+.action-buttons button {
+    margin: 0 5px; /* Add spacing between buttons */
+    min-width: 100px; /* Set a minimum width for buttons */
 }

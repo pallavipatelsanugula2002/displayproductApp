@@ -12,7 +12,7 @@ const Header = () => {
 
   const handleLogoutClick = () => {
     handleLogout();
-    navigate("/login"); // Redirect to login page after logout
+    navigate("/"); // Redirect to home page after logout
   };
   return (
     <header>
@@ -43,9 +43,6 @@ const Header = () => {
                 <Link to="/products">Products</Link>
               </li>
               <li style={{marginLeft:'auto'}}>
-                <Link to="/cart">Cart</Link>
-              </li>
-              <li >
                 <button onClick={handleLogoutClick} style={{marginTop:'3px'}}>Logout</button>
               </li>
             </>
